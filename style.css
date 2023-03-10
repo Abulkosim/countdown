@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: url('/time.avif') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+h1 {
+  font-size: 60px;
+  letter-spacing: 5px;
+  margin-top: -80px;
+  margin-bottom: 50px;
+}
+
+.countdown {
+  display: flex;
+  transform: scale(2);
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.time h2 {
+  margin: 0 0 5px;
+}
+
+#year {
+  font-size: 120px;
+  position: fixed;
+  bottom: 30px;
+  opacity: 0.5;
+}
+
+@media (max-width: 720px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  .time {
+    margin: 5px;
+  }
+
+  .time h2 {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .time small {
+    font-size: 10px;
+  }
+}
+
+
+
